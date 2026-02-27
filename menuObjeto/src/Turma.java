@@ -10,7 +10,7 @@ public class Turma {
         this.periodo = periodo;
         this.ativo = true;
     }
-
+//
     private Periodo periodo;
 
     public String getCurso() {
