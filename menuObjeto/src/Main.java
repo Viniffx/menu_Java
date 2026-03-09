@@ -371,6 +371,21 @@ public class Main {
     }
 
     private static void listarAlunos() {
+        if(isVazioAluno(listaAlunos)){
+            System.out.println("Não há alunos cadastrados.");
+            return;
+        }
+        for(Aluno a : listaAlunos){
+            if(a.isAtivoAluno())
+                System.out.println(a);
+        }
+    }
 
+    private static boolean isVazioAluno(ArrayList<Aluno> listaAlunos) {
+        if(listaAlunos.isEmpty()) return true;
+        for(Aluno aluno : listaAlunos){
+            if(aluno.isAtivoAluno()) return false;
+        }
+        return true;
     }
 }
